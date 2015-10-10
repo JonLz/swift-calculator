@@ -18,10 +18,20 @@ class ViewController: UIViewController
     
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
+        let decimalFound = digit == "."
+        if decimalFound {
+            if (display.text!.rangeOfString(".") != nil) {
+                return
+            }
+        }
         if userIsInTheMiddleOfTypingANumber {
             display.text = display.text! + digit
         } else {
-            display.text = digit
+            if decimalFound {
+                display.text = "0" + digit
+            } else {
+                display.text = digit
+            }
             userIsInTheMiddleOfTypingANumber = true
         }
     }
