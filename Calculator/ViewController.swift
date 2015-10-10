@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController
 {
     @IBOutlet weak var display: UILabel!
-   
+    @IBOutlet weak var history: UILabel!
     var userIsInTheMiddleOfTypingANumber: Bool = false
     
     var brain = CalculatorBrain()
@@ -36,12 +36,11 @@ class ViewController: UIViewController
         }
     }
     
-    @IBAction func pi() {
-        if userIsInTheMiddleOfTypingANumber {
-            enter()
-        }
-        displayValue = 3.14159265359
-        enter()
+    @IBAction func clear() {
+        userIsInTheMiddleOfTypingANumber = false
+        display.text = "0"
+        history.text = "0"
+        brain.clearOperands()
     }
     
     @IBAction func operate(sender: UIButton) {
@@ -74,6 +73,7 @@ class ViewController: UIViewController
         set {
             display.text = "\(newValue)"
             userIsInTheMiddleOfTypingANumber = false
+            history.text = brain.showStack()
         }
     }
     
