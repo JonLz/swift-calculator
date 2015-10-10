@@ -36,6 +36,14 @@ class ViewController: UIViewController
         }
     }
     
+    @IBAction func pi() {
+        if userIsInTheMiddleOfTypingANumber {
+            enter()
+        }
+        displayValue = 3.14159265359
+        enter()
+    }
+    
     @IBAction func operate(sender: UIButton) {
         if userIsInTheMiddleOfTypingANumber {
             enter()

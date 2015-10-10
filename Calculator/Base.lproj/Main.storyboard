@@ -154,14 +154,26 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tb-B6-BWk">
                                 <rect key="frame" x="470" y="334" width="103" height="125"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="pi"/>
+                                <connections>
+                                    <action selector="pi" destination="BYZ-38-t0r" eventType="touchUpInside" id="bXH-sD-ZKV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP3-aQ-ybf">
                                 <rect key="frame" x="470" y="200" width="103" height="126"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="cos"/>
+                                <connections>
+                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wPb-dA-QBw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xj-fs-rmF">
                                 <rect key="frame" x="470" y="67" width="103" height="126"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="sin"/>
+                                <connections>
+                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EF9-uB-6dQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6M-OA-EkP">
                                 <rect key="frame" x="359" y="67" width="103" height="126"/>
