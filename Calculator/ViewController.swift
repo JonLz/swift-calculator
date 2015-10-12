@@ -43,6 +43,17 @@ class ViewController: UIViewController
         brain.clearOperands()
     }
     
+    @IBAction func backspace() {
+        if userIsInTheMiddleOfTypingANumber {
+            let displayText = display.text!
+            if (displayText.characters.count) > 1 {
+                display.text = String(displayText.characters.dropLast())
+            } else {
+                display.text = "0"
+            }
+        }
+    }
+    
     @IBAction func operate(sender: UIButton) {
         if userIsInTheMiddleOfTypingANumber {
             enter()
